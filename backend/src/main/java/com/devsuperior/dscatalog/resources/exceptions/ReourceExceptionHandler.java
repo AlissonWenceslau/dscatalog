@@ -25,7 +25,7 @@ public class ReourceExceptionHandler {
 		err.setMessage(e.getMessage());
 		err.setPath(request.getRequestURI());
 		
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
+		return ResponseEntity.status(status).body(err);
 	}
 	
 	@ExceptionHandler(DatababaseException.class)
@@ -38,6 +38,6 @@ public class ReourceExceptionHandler {
 		err.setMessage(e.getMessage());
 		err.setPath(request.getRequestURI());
 		
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
+		return ResponseEntity.status(status).body(err);
 	}
 }
