@@ -21,5 +21,6 @@ Este é um monorepo pensado em separar o backend de uma possível implementaçã
 5. Hibernate bean validation: Módulo no qual fornece o esquema de bean validation
 6. Mockito: Fornece mecânismo para testes da aplicação
 7. H2 Database: É um banco de dados relacional em memória
+8. Padrão de Arquitetura em Camadas: Visando produtividade, manutenabilidade e escalabilidade do sistema
 
 <img src="assets/modelo-conceitual.png">
