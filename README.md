@@ -1,6 +1,6 @@
 # DSCatalog
 
-Esse é um projeto backend, desenvolvido em java utilizando spring boot na **versão 2.4.4** visando performance para o seu prpósito. A ideia do projeto é criar um sistema simples de catálogo de produtos, onde terá crud de usuários e produtos. Pensando ao longo prazo, apesar deste projeto ser simples, ele conta com as melhores práticas de programação, obedecendo  a modelagem abaixo no qual foi proposto,  respeitando o padrão em camadas e suas responsabilidades e aplicando o princípio de inversão de controle e injeção de dependência por meio do spring framework. 
+Esse é um projeto backend, desenvolvido em java utilizando spring boot na **versão 2.4.4** visando performance para o seu prpósito. A ideia do projeto é criar um sistema simples de catálogo de produtos, onde terá crud de usuários e produtos. Pensando ao longo prazo, apesar deste projeto ser simples, ele conta com as melhores práticas de programação, obedecendo  a modelagem abaixo no qual foi proposto,  respeitando o padrão em camadas e suas responsabilidades, aplicando o princípio de inversão de controle e injeção de dependência por meio do spring framework e disponibilizando os dados via web services por meio de uma API Rest. 
 
 O projeto também conta com **testes unitários** utilizando mockito, o que dá a flexibilidade de testar cada entidade de forma individual. Além disso, foi implementado **testes de integração** para que o sistema possa ser testado como um todo e claro, tudo isso seguindo as boas práticas bem como o padrão **Arrange**, **Act** & **Assert** para criação, execução das ações e declaração do que deveria acontecer em cada teste.
 
@@ -24,3 +24,40 @@ Este é um monorepo pensado em separar o backend de uma possível implementaçã
 8. Padrão de Arquitetura em Camadas: Visando produtividade, manutenabilidade e escalabilidade do sistema
 
 <img src="assets/modelo-conceitual.png">
+
+## Postman
+
+### Login
+![Login](assets/postman-login.png)
+
+### New category
+```json
+{
+    "name":"Garden"
+}
+``````
+### New product
+```json
+{
+  "date": "2020-07-20T10:00:00Z",
+  "description": "The new generation PS5 video game",
+  "name": "Console PS5",
+  "imgUrl": "",
+  "price": 6000.0,
+  "categories": [
+    {
+      "id": 1
+    },
+    {
+      "id": 3
+    }
+  ]
+}
+```
+### Nova Categoria
+![New Category](assets/postman-nova-categoria.png)
+### Novo Produto
+![New Product](assets/postman-novo-produto.png)
+
+## Exceções
+![New Product](assets/postman-excecao-produtos.png)
