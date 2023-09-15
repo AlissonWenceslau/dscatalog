@@ -6,11 +6,11 @@ O projeto também conta com **testes unitários** utilizando mockito, o que dá 
 
 Pensando em validação, o projeto conta com **bean validation** para que o backend se garanta nas validações da aplicação, como por exemplo: A entidade usuário precisa dos campos **nome** e **e-mail** para cadastro, e aí que entra as constraints **@NotNull** e **@Email** que garante que esses atributos estejam adequados para a consistência e persistência do cadastro do usuário no banco de dados, caso contrário, há um tratamento de exceções para capturar esses possíveis GAPs.
 
-Pensando na segurança, foi implementado o protocolo OAuth2 para autenticação e autorização aos endpoints configurados e como método para geração de token, foi utilizado o padrão JWT que funciona muito bem e é muito utilizado em **Web Services**
+Pensando na segurança, foi implementado o protocolo OAuth2 para autenticação e autorização aos endpoints configurados, visto que um usuário pode ter papeis de **ROLE_ADMIN** e **ROLE_OPERATOR** para controle de acesso aos endpoints. Como método para geração de token, foi utilizado o padrão JWT que funciona muito bem e é muito utilizado em **Web Services**
 
 O projeto foi dividido em cinco camadas, sendo elas: entidades, repositórios, serviços, objeto de transferência de dados & recursos, tornando a aplicação flexivel e escalável!
 
-Este é um monorepo pensado em separar o backend de uma possível implementação de um frontend, assim aplicando o princípio da escalabilidade.
+Este é um monorepo pensado em separar o backend de uma possível implementação de um frontend!
 
 ## Técnologias implementadas
 
